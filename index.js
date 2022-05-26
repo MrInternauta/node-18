@@ -26,8 +26,15 @@ test('Try test with findLast', async () => {
   assert.equal(lastEven, 8, 'Fails')
 })
 
-test('Try test with findLastIndex', async () => {
+test('Try test with findLastIndex', () => {
   const nums = [1, 3, 4, 5, 8]
   const lastEvenIndex = nums.findLastIndex(n => n % 2 === 0);
   assert.equal(lastEvenIndex, 4, 'Fails')
+})
+
+
+test('Try test fetch', async () => {
+  let response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+  const json = await response.json();
+  assert.equal(json.name, 'ditto')
 })
