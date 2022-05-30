@@ -15,13 +15,13 @@ namespace demo
   {
     Isolate *isolate = args.GetIsolate();
     args.GetReturnValue().Set(String::NewFromUtf8(
-                                  isolate, "world")
+                                  isolate, "Hello world")
                                   .ToLocalChecked());
   }
 
   void Initialize(Local<Object> exports)
   {
-    NODE_SET_METHOD(exports, "hello", Method);
+    NODE_SET_METHOD(exports, "hola", Method);
   }
 
   NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
