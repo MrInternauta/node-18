@@ -6,7 +6,7 @@ test('oso expected oso', () => {
 
 
 test('hola expected hola', () => {
-  expect(palindrome('hola')).toBe('hola');
+  expect(palindrome('hola')).toBe('aloh');
 });
 
 test('palindrome of empty string', () => {
