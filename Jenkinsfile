@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    nodejs 'NodeJS 18.6.0'
+    nodejs 'Node-18.6'
   }
 
   options {
@@ -11,12 +11,12 @@ pipeline {
   stages {
     stage('Install dependencies') {
       steps {
-        sh 'cd 01-jest && npm i'
+        sh 'cd 01-jest && npm install'
       }
     }
     stage('Run tests') {
       steps {
-        sh 'cd 01-jest && npm test'
+        sh 'cd 01-jest && npm run test'
       }
     }
   }
