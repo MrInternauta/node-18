@@ -105,3 +105,5 @@ dist
 
 #Native buids
 build/
+._*
+.DS_Store
